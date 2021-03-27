@@ -11,7 +11,7 @@ import SwiftUI
 struct RepoSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RepoView()
         }
     }
 }
