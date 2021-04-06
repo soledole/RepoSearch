@@ -11,20 +11,26 @@ struct SearchBar: View {
     
     // MARK: - PROPERTIES
     
-    @State var searchText: String
-    @State var isSearching: Bool
+    @State var searchText = ""
+    @State var isSearching = false
+    @EnvironmentObject var repos: Repos
     
     // MARK: - BODY
     
     var body: some View {
         HStack {
-            
             HStack {
-                TextField("Search terms here", text: $searchText)
-                    .padding(.leading, 24)
+                TextField("Search terms here", text: $searchText, onCommit: {
+                    if testVersion == true { print(searchText) }
+                    GitHubApi().fetchData(for: searchText) { (repositories) in
+                        repos.repositories = repositories
+                    } //: API
+                }) //: FIELD
+                .padding(.leading, 24)
             } //: HSTACK
             .padding()
-            .background(Color(.systemGray5))
+            .frame(height: 40)
+            .background(colorBackground)
             .cornerRadius(12)
             .padding(.horizontal)
             .onTapGesture(perform: {
@@ -34,7 +40,7 @@ struct SearchBar: View {
                 HStack {
                     Image(systemName: "magnifyingglass")
                     Spacer()
-                    
+
                     if isSearching {
                         
                         Button(action: { searchText = "" }, label: {
@@ -44,7 +50,7 @@ struct SearchBar: View {
                     }
                 } //: HSTACK
                 .padding(.horizontal, 32)
-                .foregroundColor(.gray)
+                .foregroundColor(colorElements)
             )
             .transition(.move(edge: .trailing))
             .animation(.easeIn)
@@ -53,9 +59,7 @@ struct SearchBar: View {
                 Button(action: {
                     isSearching = false
                     searchText = ""
-                    
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                    
                 }, label: {
                     Text("Cancel")
                         .padding(.trailing)
@@ -63,9 +67,16 @@ struct SearchBar: View {
                 })
                 .transition(.move(edge: .trailing))
                 .animation(.easeIn)
-            }
-            
+            } //: IF
         } //: HSTACK
+        
+        HStack {
+            LabelView(text: "Repositories")
+            Spacer()
+        } //: HSTACK
+        .padding(.top, 20)
+        .padding(.bottom, 10)
+        
     }
 }
 
@@ -73,7 +84,7 @@ struct SearchBar: View {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchText: "", isSearching: false)
-            .previewLayout(.sizeThatFits)
+        SearchBar()
+            .environmentObject(Repos())
     }
 }

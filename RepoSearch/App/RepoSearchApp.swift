@@ -12,6 +12,7 @@ struct RepoSearchApp: App {
     var body: some Scene {
         WindowGroup {
             RepoView()
+                .environmentObject(Repos())
         }
     }
 }

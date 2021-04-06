@@ -11,34 +11,27 @@ struct RepoView: View {
     
     // MARK: - PROPERTIES
     
+    @EnvironmentObject var repos: Repos
+    
     // MARK: - BODY
     
     var body: some View {
         
-        NavigationView {
-            
-            ScrollView {
+        ZStack {
+            VStack {
+                HStack {
+                    TitleView(text: "Search")
+                    Spacer()
+                }
+                .padding(.top, 50)
+                .padding(.bottom, 5)
                 
-                SearchBar(searchText: searchText, isSearching: isSearching)
+                SearchBar()
                 
-                ForEach((0..<20).filter({ "\($0)".contains(searchText) || searchText.isEmpty }), id: \.self) { item in
-                    
-                    HStack {
-                        Text("item \(item)")
-                        Spacer()
-                    } //: HSTACK
-                    .padding()
-                    
-                    Divider()
-                        .background(Color(.systemGray5))
-                        .padding(.leading)
-                    
-                } //: FOR
-                
-            } //: SCROLL
-            .navigationTitle("Search")
-            
-        } //: NAVIGATION
+                RepositoryView()
+            } //: VSTACK
+        } //: ZSTACK
+        
     }
 }
 
@@ -47,5 +40,6 @@ struct RepoView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RepoView()
+            .environmentObject(Repos())
     }
 }
