@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D600C1C82620373400D152C8 /* RepoAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600C1C72620373400D152C8 /* RepoAuthorView.swift */; };
 		D61E2E0C260DD7150038C9FB /* RepoSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E2E0B260DD7150038C9FB /* RepoSearchApp.swift */; };
 		D61E2E0E260DD7150038C9FB /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E2E0D260DD7150038C9FB /* RepoView.swift */; };
 		D61E2E10260DD7150038C9FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61E2E0F260DD7150038C9FB /* Assets.xcassets */; };
 		D61E2E13260DD7150038C9FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61E2E12260DD7150038C9FB /* Preview Assets.xcassets */; };
 		D62AF3C82617942D0020BDF9 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AF3C72617942D0020BDF9 /* Repos.swift */; };
+		D6347B06261D97910016CB11 /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6347B05261D97910016CB11 /* RepoDetailView.swift */; };
 		D64E963B26170C62007897B3 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E963A26170C62007897B3 /* ApiCall.swift */; };
 		D64E963E26171003007897B3 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E963D26171003007897B3 /* RepositoryModel.swift */; };
 		D650271B261C8312003EA470 /* RepositoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650271A261C8312003EA470 /* RepositoryItemView.swift */; };
 		D650271F261C8844003EA470 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650271E261C8844003EA470 /* RepositoryView.swift */; };
 		D68650A0261C61510075861B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = D686509F261C61510075861B /* URLImage */; };
 		D68FC60E2610AA440024D4E6 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68FC60D2610AA440024D4E6 /* LabelView.swift */; };
+		D6949AEF261EF28000553632 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6949AEE261EF28000553632 /* BackButton.swift */; };
+		D6949AF2261F04BF00553632 /* BackgroundAvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6949AF1261F04BF00553632 /* BackgroundAvatarImage.swift */; };
+		D6949AF5261F09CA00553632 /* HelpingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6949AF4261F09CA00553632 /* HelpingFunctions.swift */; };
 		D6D32245260FDE14005868B4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D32244260FDE14005868B4 /* SearchBar.swift */; };
 		D6E2CA922618F910002EBFEC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2CA912618F910002EBFEC /* TitleView.swift */; };
 		D6E4F98C260FA8B900FDF557 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4F98B260FA8B900FDF557 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D600C1C72620373400D152C8 /* RepoAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoAuthorView.swift; sourceTree = "<group>"; };
 		D61E2E08260DD7150038C9FB /* RepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E2E0B260DD7150038C9FB /* RepoSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchApp.swift; sourceTree = "<group>"; };
 		D61E2E0D260DD7150038C9FB /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
@@ -31,11 +37,15 @@
 		D61E2E12260DD7150038C9FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D61E2E14260DD7150038C9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D62AF3C72617942D0020BDF9 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
-		D64E963A26170C62007897B3 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiCall.swift; path = RepoSearch/View/ApiCall.swift; sourceTree = SOURCE_ROOT; };
-		D64E963D26171003007897B3 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = RepoSearch/View/RepositoryModel.swift; sourceTree = SOURCE_ROOT; };
+		D6347B05261D97910016CB11 /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
+		D64E963A26170C62007897B3 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiCall.swift; path = RepoSearch/Extension/ApiCall.swift; sourceTree = SOURCE_ROOT; };
+		D64E963D26171003007897B3 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = RepoSearch/Model/RepositoryModel.swift; sourceTree = SOURCE_ROOT; };
 		D650271A261C8312003EA470 /* RepositoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryItemView.swift; path = RepoSearch/View/RepositoryItemView.swift; sourceTree = SOURCE_ROOT; };
 		D650271E261C8844003EA470 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		D68FC60D2610AA440024D4E6 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		D6949AEE261EF28000553632 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		D6949AF1261F04BF00553632 /* BackgroundAvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAvatarImage.swift; sourceTree = "<group>"; };
+		D6949AF4261F09CA00553632 /* HelpingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelpingFunctions.swift; path = RepoSearch/Extension/HelpingFunctions.swift; sourceTree = SOURCE_ROOT; };
 		D6D32244260FDE14005868B4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D6E2CA912618F910002EBFEC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D6E4F98B260FA8B900FDF557 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D64E963A26170C62007897B3 /* ApiCall.swift */,
+				D6949AF4261F09CA00553632 /* HelpingFunctions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -123,8 +134,11 @@
 				D6E2CA912618F910002EBFEC /* TitleView.swift */,
 				D6D32244260FDE14005868B4 /* SearchBar.swift */,
 				D68FC60D2610AA440024D4E6 /* LabelView.swift */,
-				D650271A261C8312003EA470 /* RepositoryItemView.swift */,
 				D650271E261C8844003EA470 /* RepositoryView.swift */,
+				D650271A261C8312003EA470 /* RepositoryItemView.swift */,
+				D6949AEE261EF28000553632 /* BackButton.swift */,
+				D6949AF1261F04BF00553632 /* BackgroundAvatarImage.swift */,
+				D600C1C72620373400D152C8 /* RepoAuthorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +148,7 @@
 			children = (
 				D61E2E0B260DD7150038C9FB /* RepoSearchApp.swift */,
 				D61E2E0D260DD7150038C9FB /* RepoView.swift */,
+				D6347B05261D97910016CB11 /* RepoDetailView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -216,13 +231,18 @@
 				D650271F261C8844003EA470 /* RepositoryView.swift in Sources */,
 				D62AF3C82617942D0020BDF9 /* Repos.swift in Sources */,
 				D61E2E0E260DD7150038C9FB /* RepoView.swift in Sources */,
+				D600C1C82620373400D152C8 /* RepoAuthorView.swift in Sources */,
+				D6347B06261D97910016CB11 /* RepoDetailView.swift in Sources */,
 				D6D32245260FDE14005868B4 /* SearchBar.swift in Sources */,
+				D6949AF5261F09CA00553632 /* HelpingFunctions.swift in Sources */,
 				D64E963E26171003007897B3 /* RepositoryModel.swift in Sources */,
+				D6949AF2261F04BF00553632 /* BackgroundAvatarImage.swift in Sources */,
 				D61E2E0C260DD7150038C9FB /* RepoSearchApp.swift in Sources */,
 				D650271B261C8312003EA470 /* RepositoryItemView.swift in Sources */,
 				D6E4F98C260FA8B900FDF557 /* Constant.swift in Sources */,
 				D64E963B26170C62007897B3 /* ApiCall.swift in Sources */,
 				D68FC60E2610AA440024D4E6 /* LabelView.swift in Sources */,
+				D6949AEF261EF28000553632 /* BackButton.swift in Sources */,
 				D6E2CA922618F910002EBFEC /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

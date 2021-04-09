@@ -22,11 +22,18 @@ struct RepositoryView: View {
                 
                 ForEach(repos.repositories) { repository in
                     
-                    let sepFullName = repository.full_name.components(separatedBy: "/")
-                    let image = "https://github.com/\(sepFullName[0]).png"
+                    let image = HelpingFunctions().getImageLink(for: repository.full_name)
                     
                     RepositoryItemView(name: repository.name, stars: repository.stargazers_count, image: image)
-                }
+                        .onTapGesture {
+                            feedback.impactOccurred()
+                            
+                            withAnimation(.easeOut) {
+                                repos.selectedRepo = repository
+                                repos.showingRepo = true
+                            }
+                        }
+                } //: FOR
             }) //: GRID
             .padding(.horizontal, 15)
         }) //: SCROLL

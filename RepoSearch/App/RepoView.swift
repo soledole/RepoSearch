@@ -18,18 +18,22 @@ struct RepoView: View {
     var body: some View {
         
         ZStack {
-            VStack {
-                HStack {
-                    TitleView(text: "Search")
-                    Spacer()
-                }
-                .padding(.top, 50)
-                .padding(.bottom, 5)
-                
-                SearchBar()
-                
-                RepositoryView()
-            } //: VSTACK
+            if repos.showingRepo == false {
+                VStack {
+                    HStack {
+                        TitleView(text: "Search")
+                        Spacer()
+                    }
+                    .padding(.top, 50)
+                    .padding(.bottom, 5)
+                    
+                    SearchBar()
+                    
+                    RepositoryView()
+                } //: VSTACK
+            } else {
+                RepoDetailView()
+            } // : IF
         } //: ZSTACK
         
     }
