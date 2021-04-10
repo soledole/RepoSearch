@@ -8,8 +8,8 @@
 import Foundation
 
 class HelpingFunctions {
-    func getImageLink(for string: String) -> String {
-        let separateFullName = string.components(separatedBy: "/")
-        return "https://github.com/\(separateFullName[0]).png"
+    func getAuthorName(for string: String) -> String {
+        let separeteFullName = string.components(separatedBy: "/")
+        return separeteFullName[0]
     }
 }

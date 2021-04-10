@@ -70,13 +70,6 @@ struct SearchBar: View {
             } //: IF
         } //: HSTACK
         
-        HStack {
-            LabelView(text: "Repositories")
-            Spacer()
-        } //: HSTACK
-        .padding(.top, 20)
-        .padding(.bottom, 10)
-        
     }
 }
 
@@ -86,5 +79,6 @@ struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
         SearchBar()
             .environmentObject(Repos())
+            .previewLayout(.sizeThatFits)
     }
 }

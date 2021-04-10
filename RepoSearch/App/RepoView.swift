@@ -29,6 +29,13 @@ struct RepoView: View {
                     
                     SearchBar()
                     
+                    HStack {
+                        LabelView(text: "Repositories")
+                        Spacer()
+                    } //: HSTACK
+                    .padding(.top, 20)
+                    .padding(.bottom, 10)
+                    
                     RepositoryView()
                 } //: VSTACK
             } else {

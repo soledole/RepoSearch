@@ -20,8 +20,8 @@ struct RepoDetailView: View {
         VStack {
             if repos.showingRepo == true && repos.selectedRepo != nil {
                 
-                let image = HelpingFunctions().getImageLink(for: repos.selectedRepo!.full_name)
-                let author = "SoleDole"
+                let author = HelpingFunctions().getAuthorName(for: repos.selectedRepo!.full_name)
+                let image = "https://github.com/\(author).png"
                 
                 BackgroundAvatarImage(image: image)
                     .overlay(
@@ -74,6 +74,8 @@ struct RepoDetailView: View {
                 
                 Spacer() //To delete
                 
+                ShareButton(linkToShare: "https://github.com/\(repos.selectedRepo?.name ?? "https://github.com")")
+                    .padding()
             } else {
                 RepoView()
             } //: IF

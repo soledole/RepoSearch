@@ -23,9 +23,12 @@
 		D6949AEF261EF28000553632 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6949AEE261EF28000553632 /* BackButton.swift */; };
 		D6949AF2261F04BF00553632 /* BackgroundAvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6949AF1261F04BF00553632 /* BackgroundAvatarImage.swift */; };
 		D6949AF5261F09CA00553632 /* HelpingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6949AF4261F09CA00553632 /* HelpingFunctions.swift */; };
+		D6A477E526220C96009990A4 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A477E426220C96009990A4 /* ShareButton.swift */; };
 		D6D32245260FDE14005868B4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D32244260FDE14005868B4 /* SearchBar.swift */; };
 		D6E2CA922618F910002EBFEC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2CA912618F910002EBFEC /* TitleView.swift */; };
 		D6E4F98C260FA8B900FDF557 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4F98B260FA8B900FDF557 /* Constant.swift */; };
+		D6E800C226221E1600C12C3B /* CommitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E800C126221E1600C12C3B /* CommitsView.swift */; };
+		D6E800C526221FE800C12C3B /* CommitsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E800C426221FE800C12C3B /* CommitsItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +49,12 @@
 		D6949AEE261EF28000553632 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		D6949AF1261F04BF00553632 /* BackgroundAvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAvatarImage.swift; sourceTree = "<group>"; };
 		D6949AF4261F09CA00553632 /* HelpingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelpingFunctions.swift; path = RepoSearch/Extension/HelpingFunctions.swift; sourceTree = SOURCE_ROOT; };
+		D6A477E426220C96009990A4 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		D6D32244260FDE14005868B4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D6E2CA912618F910002EBFEC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D6E4F98B260FA8B900FDF557 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D6E800C126221E1600C12C3B /* CommitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsView.swift; sourceTree = "<group>"; };
+		D6E800C426221FE800C12C3B /* CommitsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,9 @@
 				D6949AEE261EF28000553632 /* BackButton.swift */,
 				D6949AF1261F04BF00553632 /* BackgroundAvatarImage.swift */,
 				D600C1C72620373400D152C8 /* RepoAuthorView.swift */,
+				D6A477E426220C96009990A4 /* ShareButton.swift */,
+				D6E800C126221E1600C12C3B /* CommitsView.swift */,
+				D6E800C426221FE800C12C3B /* CommitsItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D650271F261C8844003EA470 /* RepositoryView.swift in Sources */,
+				D6E800C226221E1600C12C3B /* CommitsView.swift in Sources */,
 				D62AF3C82617942D0020BDF9 /* Repos.swift in Sources */,
 				D61E2E0E260DD7150038C9FB /* RepoView.swift in Sources */,
 				D600C1C82620373400D152C8 /* RepoAuthorView.swift in Sources */,
@@ -239,8 +249,10 @@
 				D6949AF2261F04BF00553632 /* BackgroundAvatarImage.swift in Sources */,
 				D61E2E0C260DD7150038C9FB /* RepoSearchApp.swift in Sources */,
 				D650271B261C8312003EA470 /* RepositoryItemView.swift in Sources */,
+				D6A477E526220C96009990A4 /* ShareButton.swift in Sources */,
 				D6E4F98C260FA8B900FDF557 /* Constant.swift in Sources */,
 				D64E963B26170C62007897B3 /* ApiCall.swift in Sources */,
+				D6E800C526221FE800C12C3B /* CommitsItemView.swift in Sources */,
 				D68FC60E2610AA440024D4E6 /* LabelView.swift in Sources */,
 				D6949AEF261EF28000553632 /* BackButton.swift in Sources */,
 				D6E2CA922618F910002EBFEC /* TitleView.swift in Sources */,

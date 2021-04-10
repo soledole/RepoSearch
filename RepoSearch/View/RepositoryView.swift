@@ -22,7 +22,8 @@ struct RepositoryView: View {
                 
                 ForEach(repos.repositories) { repository in
                     
-                    let image = HelpingFunctions().getImageLink(for: repository.full_name)
+                    let author = HelpingFunctions().getAuthorName(for: repository.full_name)
+                    let image = "https://github.com/\(author).png"
                     
                     RepositoryItemView(name: repository.name, stars: repository.stargazers_count, image: image)
                         .onTapGesture {

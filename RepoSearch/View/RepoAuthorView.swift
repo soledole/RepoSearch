@@ -55,6 +55,7 @@ struct RepoAuthorView: View {
 struct RepoAuthorView_Previews: PreviewProvider {
     static var previews: some View {
         RepoAuthorView(authorName: "Repo Author Name", stars: 234)
+            .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
             .padding()
     }
