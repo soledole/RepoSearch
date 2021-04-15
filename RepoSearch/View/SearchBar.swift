@@ -22,7 +22,8 @@ struct SearchBar: View {
             HStack {
                 TextField("Search terms here", text: $searchText, onCommit: {
                     if testVersion == true { print(searchText) }
-                    GitHubApi().fetchData(for: searchText) { (repositories) in
+                    
+                    GitHubApi().fetchDataForRepositories(for: searchText) { (repositories) in
                         repos.repositories = repositories
                     } //: API
                 }) //: FIELD
@@ -33,15 +34,16 @@ struct SearchBar: View {
             .background(colorBackground)
             .cornerRadius(12)
             .padding(.horizontal)
-            .onTapGesture(perform: {
+            .onTapGesture {
+                feedback.impactOccurred()
                 isSearching = true
-            })
+            }
             .overlay(
                 HStack {
                     Image(systemName: "magnifyingglass")
                     Spacer()
 
-                    if isSearching {
+                    if !(searchText.isEmpty) {
                         
                         Button(action: { searchText = "" }, label: {
                             Image(systemName: "xmark.circle.fill")

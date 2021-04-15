@@ -11,4 +11,6 @@ class Repos: ObservableObject {
     @Published var showingRepo: Bool = false
     @Published var selectedRepo: Repository? = nil
     @Published var repositories: [Repository] = []
+    
+    @Published var commits: [Commits] = []
 }

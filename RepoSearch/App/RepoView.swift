@@ -17,31 +17,29 @@ struct RepoView: View {
     
     var body: some View {
         
-        ZStack {
-            if repos.showingRepo == false {
-                VStack {
-                    HStack {
-                        TitleView(text: "Search")
-                        Spacer()
-                    }
-                    .padding(.top, 50)
-                    .padding(.bottom, 5)
+        if repos.showingRepo == false {
+            VStack {
+                HStack {
+                    TitleView(text: "Search")
+                    Spacer()
+                }
+                .padding(.top, 50)
+                .padding(.bottom, 5)
                     
-                    SearchBar()
+                SearchBar()
                     
-                    HStack {
-                        LabelView(text: "Repositories")
-                        Spacer()
-                    } //: HSTACK
-                    .padding(.top, 20)
-                    .padding(.bottom, 10)
+                HStack {
+                    LabelView(text: "Repositories")
+                    Spacer()
+                } //: HSTACK
+                .padding(.top, 20)
+                .padding(.bottom, 10)
                     
-                    RepositoryView()
-                } //: VSTACK
-            } else {
-                RepoDetailView()
-            } // : IF
-        } //: ZSTACK
+                RepositoryView()
+            } //: VSTACK
+        } else {
+            RepoDetailView()
+        } // : IF
         
     }
 }

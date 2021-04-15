@@ -5,7 +5,7 @@
 //  Created by Jędrzej Kuś on 02/04/2021.
 //
 
-import SwiftUI
+import Foundation
 
 struct Repositories: Codable {
     let items: [Repository]

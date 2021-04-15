@@ -17,12 +17,12 @@ struct RepoDetailView: View {
     
     var body: some View {
         
-        VStack {
-            if repos.showingRepo == true && repos.selectedRepo != nil {
-                
-                let author = HelpingFunctions().getAuthorName(for: repos.selectedRepo!.full_name)
-                let image = "https://github.com/\(author).png"
-                
+        if repos.showingRepo == true && repos.selectedRepo != nil {
+            
+            let author = HelpingFunctions().getAuthorName(for: repos.selectedRepo!.full_name)
+            let image = "https://github.com/\(author).png"
+            
+            VStack {
                 BackgroundAvatarImage(image: image)
                     .overlay(
                         HStack {
@@ -72,14 +72,20 @@ struct RepoDetailView: View {
                     Spacer()
                 } //: HSTACK
                 
-                Spacer() //To delete
+                CommitsView()
                 
                 ShareButton(linkToShare: "https://github.com/\(repos.selectedRepo?.name ?? "https://github.com")")
                     .padding()
-            } else {
-                RepoView()
-            } //: IF
-        } //: ZSTACK
+            } //: VSTACK
+            .onAppear {
+                GitHubApi().fetchDataForCommits(repository: repos.selectedRepo!.name, author: author) { (commits) in
+                    repos.commits = commits
+                } //: API
+            }
+            
+        } else {
+            RepoView()
+        } //: IF
         
     }
 }

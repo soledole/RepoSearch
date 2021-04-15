@@ -9,6 +9,7 @@ import SwiftUI
 
 // DATA
 let testVersion = true
+let commitsPerPage = 35
 
 // COLOR
 let colorElements: Color = Color(.gray)
